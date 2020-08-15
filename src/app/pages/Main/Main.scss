@@ -1,0 +1,51 @@
+.main {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  &__mask {
+    position: absolute;
+    width: 40%;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    background: linear-gradient(
+      270deg,
+      #d8d0c7 0%,
+      rgba(223, 204, 183, 0.9) 100%
+    );
+  }
+  &__image {
+    position: absolute;
+    z-index: -1;
+    width: 60%;
+    height: 100vh;
+    margin-left: 40%;
+    overflow: hidden;
+    background-image: url("../../../assets/images/main_img.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  &__menuBox {
+    width: 90%;
+    height: 10vh;
+    margin-left: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__titleBox {
+    position: absolute;
+    margin-left: 20%;
+    margin-top: 25vh;
+  }
+  &__socialBox {
+    width: 96%;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 5vh;
+    display: flex;
+    justify-content: flex-end;
+  }
+}

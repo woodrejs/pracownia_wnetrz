@@ -1,0 +1,38 @@
+.offers {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  &__image {
+    height: 100vh;
+    width: 30vw;
+    margin-left: 55vw;
+    position: absolute;
+    background-image: url("../../../assets//images/mini_img.jpg");
+    z-index: -1;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &__handler {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 32vw;
+    left: 8vw;
+    top: 17vh;
+    border-bottom: 1px solid #2f2f2f;
+    &__item {
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      line-height: 4rem;
+    }
+  }
+  &__content {
+    position: absolute;
+    width: 32vw;
+    height: 43vh;
+    top: 34vh;
+    left: 8vw;
+  }
+}

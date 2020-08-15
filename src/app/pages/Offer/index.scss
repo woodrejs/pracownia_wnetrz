@@ -1,0 +1,111 @@
+.offer {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  &__contentBox {
+    position: absolute;
+    left: 7%;
+    top: 20vh;
+    height: 70vh;
+    width: 30%;
+    &__title {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 3rem;
+      line-height: 5rem;
+      letter-spacing: 0.02em;
+      margin-bottom: 2rem;
+    }
+    &__price {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 2rem;
+      line-height: 4rem;
+      letter-spacing: 0.05em;
+    }
+    &__price__info {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 1rem;
+      line-height: 1.2em;
+      letter-spacing: 0.05em;
+    }
+    &__subTitle {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.2rem;
+      letter-spacing: 0.05em;
+      margin: 5rem 0 1rem 0;
+    }
+    &__description {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 1.1rem;
+      line-height: 2.5rem;
+      letter-spacing: 0.05em;
+    }
+  }
+  &__imageBox {
+    height: 100vh;
+    width: 30%;
+    margin-left: 60%;
+    position: absolute;
+    background-image: url("../../../assets//images/mini_img.jpg");
+    z-index: -1;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &__backBox {
+    cursor: pointer;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    position: absolute;
+    top: 80vh;
+    left: 56%;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 4rem;
+    letter-spacing: 0.05em;
+  }
+  &__menuBox {
+    width: 90%;
+    height: 10vh;
+    margin-left: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__copywriterBox {
+    text-align: center;
+    width: 100%;
+    font-size: 0.8rem;
+    line-height: 2rem;
+  }
+  &__socialBox {
+    width: 96%;
+    margin: 0 auto;
+    position: fixed;
+    bottom: 5vh;
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__moreContent {
+    margin: 7%;
+    &__title {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.2rem;
+      letter-spacing: 0.05em;
+      margin: 5rem 0 1rem 0;
+    }
+    &__description {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 1.1rem;
+      line-height: 2.5rem;
+      letter-spacing: 0.05em;
+    }
+  }
+}

@@ -1,0 +1,104 @@
+.contact {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  &__mask {
+    height: 100vh;
+    width: 30vw;
+    z-index: -1;
+    position: absolute;
+    background: rgba(235, 226, 215, 0.75);
+  }
+  &__image {
+    height: 100vh;
+    width: 30vw;
+    position: absolute;
+    background-image: url("../../../assets//images/contact_bck.jpg");
+    z-index: -2;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &__data {
+    position: absolute;
+    left: 45vw;
+    top: 35vh;
+    width: 40vw;
+    height: 40vh;
+
+    &__name {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 2rem;
+      line-height: 5rem;
+      letter-spacing: 0.02em;
+    }
+    &__company {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.5rem;
+      line-height: 5rem;
+      letter-spacing: 0.02em;
+      margin-bottom: 2rem;
+    }
+    &__mail {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1rem;
+      line-height: 2rem;
+      letter-spacing: 0.02em;
+    }
+    &__phone {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1rem;
+      line-height: 2rem;
+      letter-spacing: 0.02em;
+    }
+    &__NIP {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1rem;
+      line-height: 2rem;
+      letter-spacing: 0.02em;
+    }
+  }
+  &__title {
+    position: absolute;
+    left: 30vw;
+    top: 25vh;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3rem;
+    line-height: 5rem;
+    letter-spacing: 0.02em;
+  }
+  &__menuBox {
+    width: 90vw;
+    height: 10vh;
+    margin-left: 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__copywriterBox {
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    font-size: 0.8rem;
+    line-height: 2rem;
+  }
+  &__socialBox {
+    width: 96vw;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 5vh;
+    display: flex;
+    justify-content: flex-end;
+  }
+}

@@ -1,0 +1,44 @@
+@import "../../scss/VARIABLES.scss";
+
+.offerInfo {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  &__title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3rem;
+    line-height: 4rem;
+    letter-spacing: 0.02em;
+    color: $third;
+    margin-bottom: 2rem;
+  }
+  &__price {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    letter-spacing: 0.05em;
+    color: $third;
+  }
+  &__price__info {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    color: $third;
+    margin-bottom: 2rem;
+  }
+  &__description {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+    letter-spacing: 0.05em;
+    color: $third;
+    margin-bottom: 6rem;
+  }
+  &__button {
+    // tmp unused
+  }
+}
