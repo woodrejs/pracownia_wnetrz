@@ -1,7 +1,6 @@
 @import "../../scss//VARIABLES.scss";
 
 .titleSection {
-  //border: 1px solid red;
   width: 40vw;
   &__title {
     font-weight: 300;
@@ -20,5 +19,37 @@
   }
   &__button {
     margin-top: 3rem;
+  }
+}
+
+@media screen and (max-width: 415px) and (orientation: portrait) {
+  .titleSection {
+    width: 100%;
+    &__title {
+      margin: 0 10vw;
+    }
+    &__subTittle {
+      display: none;
+    }
+    &__button {
+      display: flex;
+      justify-content: center;
+      margin-top: 3rem;
+    }
+  }
+}
+@media screen and (min-width: 416px) and (max-width: 769px) and (orientation: portrait) {
+  .titleSection {
+    width: 60vw;
+  }
+}
+@media screen and (max-width: 801px) and (orientation: landscape) {
+  .titleSection {
+    &__title {
+      width: 80vw;
+    }
+    &__subTittle {
+      width: 50vw;
+    }
   }
 }

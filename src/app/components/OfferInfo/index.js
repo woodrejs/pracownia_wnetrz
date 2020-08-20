@@ -1,7 +1,6 @@
 import React from "react";
 import "./index.scss";
 import Button from "../Button";
-import { primary } from "../../global/COLORS";
 
 const OfferInfo = () => {
   return (
@@ -17,9 +16,13 @@ const OfferInfo = () => {
       </p>
       <div className="offerInfo__button">
         <Button
-          title="więcej"
-          size={{ width: "12rem", height: "2rem" }}
-          color={{ backgroundColor: primary }}
+          size={{
+            height: "3rem",
+            width: "15rem",
+            lineHeight: "3rem",
+          }}
+          title="oferta"
+          path="/offer"
         />
       </div>
     </div>

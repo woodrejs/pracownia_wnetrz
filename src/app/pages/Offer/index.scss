@@ -1,48 +1,43 @@
+@import "../../scss/KEYFRAMES.scss";
+
 .offer {
   min-height: 100vh;
   width: 100%;
   position: relative;
   &__contentBox {
     position: absolute;
-    left: 7%;
+    left: 8%;
     top: 20vh;
     height: 70vh;
-    width: 30%;
-    &__title {
+    width: 35%;
+    &__item {
       font-style: normal;
       font-weight: normal;
-      font-size: 3rem;
-      line-height: 5rem;
-      letter-spacing: 0.02em;
+      letter-spacing: 0.05em;
       margin-bottom: 2rem;
-    }
-    &__price {
-      font-style: normal;
-      font-weight: normal;
-      font-size: 2rem;
-      line-height: 4rem;
-      letter-spacing: 0.05em;
-    }
-    &__price__info {
-      font-style: normal;
-      font-weight: 300;
-      font-size: 1rem;
-      line-height: 1.2em;
-      letter-spacing: 0.05em;
-    }
-    &__subTitle {
-      font-style: normal;
-      font-weight: normal;
-      font-size: 1.2rem;
-      letter-spacing: 0.05em;
-      margin: 5rem 0 1rem 0;
-    }
-    &__description {
-      font-style: normal;
-      font-weight: 300;
-      font-size: 1.1rem;
-      line-height: 2.5rem;
-      letter-spacing: 0.05em;
+      &--title {
+        font-size: 2.5rem;
+        line-height: 5rem;
+      }
+      &--price {
+        font-size: 1.9rem;
+        line-height: 4rem;
+        margin-bottom: 0;
+      }
+      &--info {
+        font-weight: 300;
+        font-size: 1rem;
+        line-height: 1.2em;
+        margin-bottom: 5rem;
+      }
+      &--subTitle {
+        font-size: 1.2rem;
+      }
+      &--description {
+        font-weight: 300;
+        font-size: 1rem;
+        line-height: 2.5rem;
+      }
     }
   }
   &__imageBox {
@@ -61,21 +56,13 @@
     writing-mode: vertical-rl;
     text-orientation: mixed;
     position: absolute;
-    top: 80vh;
+    bottom: 5vh;
     left: 56%;
     font-style: normal;
     font-weight: 300;
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 4rem;
     letter-spacing: 0.05em;
-  }
-  &__menuBox {
-    width: 90%;
-    height: 10vh;
-    margin-left: 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
   &__copywriterBox {
     text-align: center;
@@ -83,29 +70,115 @@
     font-size: 0.8rem;
     line-height: 2rem;
   }
-  &__socialBox {
-    width: 96%;
-    margin: 0 auto;
-    position: fixed;
-    bottom: 5vh;
-    display: flex;
-    justify-content: flex-end;
-  }
+
   &__moreContent {
-    margin: 7%;
-    &__title {
-      font-style: normal;
-      font-weight: normal;
-      font-size: 1.2rem;
-      letter-spacing: 0.05em;
-      margin: 5rem 0 1rem 0;
-    }
-    &__description {
+    margin: 8%;
+
+    &__item {
       font-style: normal;
       font-weight: 300;
-      font-size: 1.1rem;
-      line-height: 2.5rem;
       letter-spacing: 0.05em;
+      &--title {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        font-weight: normal;
+      }
+      &--description {
+        font-size: 1rem;
+        line-height: 2.5rem;
+        padding-bottom: 10vh;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 415px) and (orientation: portrait) {
+  .offer {
+    &__contentBox {
+      left: 15vw;
+      top: 18vh;
+      width: 70vw;
+      height: 85vh;
+      &__item {
+        &--subTitle {
+          font-size: 1.3rem;
+        }
+        &--description {
+          font-size: 1.2rem;
+        }
+      }
+    }
+    &__imageBox {
+      display: none;
+    }
+    &__backBox {
+      position: fixed;
+      font-weight: normal;
+      left: 2vw;
+      bottom: 5vh;
+    }
+    &__moreContent {
+      margin: 15vw;
+      width: 70vw;
+      margin-top: 0;
+      &__item {
+        &--title {
+          font-size: 1.3rem;
+        }
+        &--description {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 416px) and (max-width: 769px) and (orientation: portrait) {
+  .offer {
+    &__contentBox {
+      width: 40%;
+      &__item {
+        &--description {
+          font-size: 1.2rem;
+          line-height: 2.1rem;
+        }
+      }
+    }
+    &__backBox {
+      font-weight: normal;
+      left: 52vw;
+    }
+    &__moreContent {
+      &__item {
+        &--description {
+          font-size: 1.2rem;
+          line-height: 2.1rem;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 737px) and (orientation: landscape) {
+  .offer {
+    &__contentBox {
+      left: 15%;
+      top: 15vh;
+      width: 75vw;
+      &__item {
+        margin-bottom: 0rem;
+        &--info {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+    &__imageBox {
+      display: none;
+    }
+    &__backBox {
+      position: fixed;
+      left: 6%;
+    }
+    &__moreContent {
+      margin: 5% 15%;
     }
   }
 }

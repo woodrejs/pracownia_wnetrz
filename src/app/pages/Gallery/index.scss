@@ -22,23 +22,6 @@
     letter-spacing: 0.02em;
   }
 
-  &__menuBox {
-    width: 90vw;
-    height: 10vh;
-    margin-left: 5vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  &__socialBox {
-    width: 96vw;
-    margin: 0 auto;
-    position: fixed;
-    bottom: 5vh;
-    display: flex;
-    justify-content: flex-end;
-  }
-
   &__copywriterBox {
     text-align: center;
     position: absolute;

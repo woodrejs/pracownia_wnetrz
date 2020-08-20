@@ -1,7 +1,6 @@
 import React from "react";
 import "./index.scss";
 import Button from "../Button";
-import { secoundary } from "../../global/COLORS";
 
 const TitleSection = () => {
   return (
@@ -13,9 +12,14 @@ const TitleSection = () => {
       </h3>
       <div className="titleSection__button">
         <Button
-          size={{ height: "2.1rem", width: "10rem" }}
-          color={{ backgroundColor: secoundary }}
+          size={{
+            height: "3rem",
+            width: "15rem",
+            lineHeight: "3rem",
+          }}
           title="oferta"
+          type={1}
+          path="/#offers"
         />
       </div>
     </div>

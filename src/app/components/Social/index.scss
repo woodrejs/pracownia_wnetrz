@@ -1,3 +1,16 @@
 .facebook {
   cursor: pointer;
+  position: absolute;
+  bottom: 5vh;
+  right: 2vw;
+  width: 2rem;
+  height: 2rem;
+}
+
+@media screen and (orientation: portrait) {
+  .facebook {
+    height: 2.3rem;
+    height: 2.3rem;
+    right: 5vw;
+  }
 }

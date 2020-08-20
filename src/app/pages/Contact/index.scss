@@ -25,42 +25,21 @@
     top: 35vh;
     width: 40vw;
     height: 40vh;
-
-    &__name {
+    &__item {
       font-style: normal;
       font-weight: normal;
-      font-size: 2rem;
-      line-height: 5rem;
       letter-spacing: 0.02em;
-    }
-    &__company {
-      font-style: normal;
-      font-weight: normal;
-      font-size: 1.5rem;
-      line-height: 5rem;
-      letter-spacing: 0.02em;
-      margin-bottom: 2rem;
-    }
-    &__mail {
-      font-style: normal;
-      font-weight: normal;
-      font-size: 1rem;
       line-height: 2rem;
-      letter-spacing: 0.02em;
-    }
-    &__phone {
-      font-style: normal;
-      font-weight: normal;
       font-size: 1rem;
-      line-height: 2rem;
-      letter-spacing: 0.02em;
-    }
-    &__NIP {
-      font-style: normal;
-      font-weight: normal;
-      font-size: 1rem;
-      line-height: 2rem;
-      letter-spacing: 0.02em;
+      &--name {
+        font-size: 2rem;
+        line-height: 5rem;
+      }
+      &--company {
+        font-size: 1.5rem;
+        line-height: 5rem;
+        margin-bottom: 2rem;
+      }
     }
   }
   &__title {
@@ -76,14 +55,7 @@
     line-height: 5rem;
     letter-spacing: 0.02em;
   }
-  &__menuBox {
-    width: 90vw;
-    height: 10vh;
-    margin-left: 5vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+
   &__copywriterBox {
     position: absolute;
     text-align: center;
@@ -93,12 +65,59 @@
     font-size: 0.8rem;
     line-height: 2rem;
   }
-  &__socialBox {
-    width: 96vw;
-    margin: 0 auto;
-    position: absolute;
-    bottom: 5vh;
-    display: flex;
-    justify-content: flex-end;
+}
+@media screen and (max-width: 415px) and (orientation: portrait) {
+  .contact {
+    &__mask {
+      display: none;
+    }
+    &__image {
+      display: none;
+    }
+    &__data {
+      left: 15vw;
+      width: 70vw;
+      &__item {
+        text-align: right;
+        font-weight: 300;
+        font-size: 1.3rem;
+        line-height: 3rem;
+        &--name {
+          font-size: 1.8rem;
+          line-height: 2.5rem;
+          margin: 0 0 10vh 20vw;
+        }
+        &--company {
+          font-size: 1.5rem;
+          line-height: 2rem;
+          margin-bottom: 4vh;
+        }
+      }
+    }
+    &__title {
+      left: 15vw;
+      font-size: 3.5rem;
+    }
+  }
+}
+@media screen and (max-width: 737px) and (orientation: landscape) {
+  .contact {
+    &__title {
+      top: 15vh;
+      font-weight: 300;
+      font-size: 2.2rem;
+    }
+    &__data {
+      top: 15vw;
+      &__item {
+        &--name {
+          margin-bottom: 2rem;
+          line-height: 3rem;
+        }
+        &--company {
+          line-height: 3rem; //
+        }
+      }
+    }
   }
 }

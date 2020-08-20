@@ -1,16 +1,13 @@
 import React from "react";
-import "./Logo.scss";
+import "./index.scss";
 
 const Logo = () => {
   return (
-    <div className="logo">
-      <img
-        className="logo__img"
-        src={require("../../../assets/icons/logo-11.png")}
-        alt="logo_icon"
-      />
-    </div>
+    <img
+      className="logo"
+      src={require("../../../assets/icons/logo-11.png")}
+      alt="logo_icon"
+    />
   );
 };
-
 export default Logo;

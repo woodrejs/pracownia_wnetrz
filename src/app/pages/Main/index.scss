@@ -23,29 +23,37 @@
     height: 100vh;
     margin-left: 40%;
     overflow: hidden;
-    background-image: url("../../../assets/images/main_img.jpg");
     background-position: center;
     background-size: cover;
-  }
-  &__menuBox {
-    width: 90%;
-    height: 10vh;
-    margin-left: 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
   &__titleBox {
     position: absolute;
     margin-left: 20%;
-    margin-top: 25vh;
+    margin-top: 30vh;
   }
-  &__socialBox {
-    width: 96%;
-    margin: 0 auto;
-    position: absolute;
-    bottom: 5vh;
-    display: flex;
-    justify-content: flex-end;
+}
+@media screen and (max-width: 415px) and (orientation: portrait) {
+  .main {
+    &__mask {
+      display: none;
+    }
+    &__image {
+      width: 100%;
+      margin-left: 0;
+    }
+    &__titleBox {
+      margin-top: 35vh;
+      text-align: center;
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 416px) and (max-width: 769px) {
+  .main {
+    &__titleBox {
+      margin-left: 10%;
+    }
   }
 }

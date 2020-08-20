@@ -16,8 +16,8 @@
   &__price {
     font-style: normal;
     font-weight: normal;
-    font-size: 1.5rem;
-    line-height: 3rem;
+    font-size: 1.9rem;
+    line-height: 3.5rem;
     letter-spacing: 0.05em;
     color: $third;
   }
@@ -31,14 +31,31 @@
   }
   &__description {
     font-style: normal;
-    font-weight: normal;
+    font-weight: 300;
     font-size: 1.1rem;
     line-height: 1.6rem;
     letter-spacing: 0.05em;
     color: $third;
     margin-bottom: 6rem;
   }
-  &__button {
-    // tmp unused
+}
+@media screen and (max-width: 415px) {
+  .offerInfo {
+    &__title {
+      margin-bottom: 8vh;
+    }
+    &__price__info {
+      margin-bottom: 5vh;
+    }
+    &__description {
+      margin-bottom: 12vh;
+    }
+  }
+}
+@media screen and (max-width: 737px) and (orientation: landscape) {
+  .offerInfo {
+    &__description {
+      margin-bottom: 10vh;
+    }
   }
 }

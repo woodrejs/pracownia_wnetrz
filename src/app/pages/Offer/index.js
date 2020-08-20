@@ -1,7 +1,6 @@
 import React from "react";
 import "./index.scss";
-import Logo from "../../components/Logo";
-import Menu from "../../components/Menu";
+
 import Social from "../../components/Social";
 
 const Offer = () => {
@@ -9,18 +8,21 @@ const Offer = () => {
     <>
       <div className="offer">
         <div className="offer__imageBox"></div>
-        <div className="offer__menuBox">
-          <Logo />
-          <Menu />
-        </div>
+
         <div className="offer__contentBox">
-          <h2 className="offer__contentBox__title">PROJEKT MAXI</h2>
-          <h3 className="offer__contentBox__price">50 -70 zł /m2</h3>
-          <span className="offer__contentBox__price__info">
+          <h2 className="offer__contentBox__item offer__contentBox__item--title">
+            PROJEKT MAXI
+          </h2>
+          <h3 className="offer__contentBox__item offer__contentBox__item--price">
+            50 -70 zł /m2
+          </h3>
+          <p className="offer__contentBox__item offer__contentBox__item--info">
             Koszt projektu zależny jest od metrażu projektowanych pomieszczeń
-          </span>
-          <h4 className="offer__contentBox__subTitle">Zakres projektu:</h4>
-          <p className="offer__contentBox__description">
+          </p>
+          <h4 className="offer__contentBox__item offer__contentBox__item--subTitle">
+            Zakres projektu:
+          </h4>
+          <p className="offer__contentBox__item offer__contentBox__item--description">
             +rzuty funkcjonalne 2 D w 2-3 wariantach do wyboru <br /> +moodbard
             (zestawienie w formie planszy 2D) produktów i materiałów
             wykończeniowych <br />
@@ -29,11 +31,15 @@ const Offer = () => {
             <br /> +konsultacje architektoniczne dotyczące projektu
           </p>
         </div>
+
         <div className="offer__backBox">wróć</div>
       </div>
+
       <div className="offer__moreContent">
-        <h3 className="offer__moreContent__title">Nadzór autorski:</h3>
-        <p className="offer__moreContent__description">
+        <h3 className="offer__moreContent__item offer__moreContent__item--title">
+          Nadzór autorski:
+        </h3>
+        <p className="offer__moreContent__item offer__moreContent__item--description">
           +Szczegółowy kosztorys prac wykończeniowych w pliku Excel
           <br /> +Koszty materiałów budowlanych rejestrowane na bieżąco w pliku
           Excel udostępnionym w chmurze
@@ -61,9 +67,9 @@ const Offer = () => {
           <br /> +związanych z realizacją projektu
         </p>
       </div>
-      <div className="offer__socialBox">
-        <Social />
-      </div>
+
+      <Social />
+
       <div className="offer__copywriterBox">© Pracownia Wnętrz 2020</div>
     </>
   );

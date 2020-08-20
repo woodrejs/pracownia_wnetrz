@@ -1,34 +1,32 @@
-import React, { useState } from "react";
-import Menu from "../../components/Menu";
-import Logo from "../../components/Logo";
+import React from "react";
+
 import TitleSection from "../../components/TitleSection";
 import Social from "../../components/Social";
-import "./Main.scss";
+import GoTopArrow from "../../components/GoTopArrow";
+import "./index.scss";
+import setBackgroundImage from "../../utils/setBackgroundImage";
 
 const Main = () => {
-  const [scrollOfsset, setScrollOffset] = useState(0);
-
-  window.addEventListener("scroll", () => {
-    setScrollOffset(window.pageYOffset);
-  });
-  const handleMenuPosition = () => {
-    if (scrollOfsset > window.innerHeight) return { position: "fixed" };
+  const imgs = {
+    small: require("../../../assets/images/main_736x414.jpg"),
+    medium: require("../../../assets/images/main_1024x768.jpg"),
+    large: require("../../../assets/images/main_1920x1080.jpg"),
   };
 
   return (
-    <div className="main">
+    <div id="main" className="main">
       <div className="main__mask"></div>
-      <div className="main__image"></div>
-      <div className="main__menuBox" style={handleMenuPosition()}>
-        <Logo />
-        <Menu />
-      </div>
+      <div
+        className="main__image"
+        style={{ backgroundImage: setBackgroundImage(imgs) }}
+      ></div>
+
       <div className="main__titleBox">
         <TitleSection />
       </div>
-      <div className="main__socialBox">
-        <Social />
-      </div>
+
+      <Social />
+      <GoTopArrow />
     </div>
   );
 };

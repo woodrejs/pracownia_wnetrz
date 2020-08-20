@@ -1,21 +1,69 @@
+/*fonts*/
 @font-face {
   font-family: "Quicksand";
   src: local("Quicksand"), url(./assets/fonts/Quicksand.ttf) format("truetype");
 }
+/*media*/
+/*portrait*/
+@media screen and (min-width: 300px) and (orientation: portrait) {
+  html {
+    font-size: 8px;
+  }
+}
+@media screen and (min-width: 374px) and (orientation: portrait) {
+  html {
+    font-size: 10px;
+  }
+}
+@media screen and (min-width: 415px) and (orientation: portrait) {
+  html {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 660px) and (orientation: portrait) {
+  html {
+    font-size: 13px;
+  }
+}
+@media screen and (min-width: 1440px) and (orientation: portrait) {
+  html {
+    font-size: 16px;
+  }
+}
+/*landscape*/
+@media screen and (min-width: 300px) and (orientation: landscape) {
+  html {
+    font-size: 9px;
+  }
+}
+@media screen and (min-width: 737px) and (orientation: landscape) {
+  html {
+    font-size: 11px;
+  }
+}
+@media screen and (min-width: 801px) and (orientation: landscape) {
+  html {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 1440px) and (orientation: landscape) {
+  html {
+    font-size: 16px;
+  }
+}
+/*global css*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #2f2f2f;
 }
-
 body {
   margin: 0;
   font-family: "Quicksand", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+html {
+  scroll-behavior: smooth;
 }

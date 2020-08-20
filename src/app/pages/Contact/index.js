@@ -1,8 +1,7 @@
 import React from "react";
 import "./index.scss";
-import Menu from "../../components/Menu";
+
 import Social from "../../components/Social";
-import Logo from "../../components/Logo";
 
 const Contact = () => {
   return (
@@ -12,26 +11,25 @@ const Contact = () => {
       <h2 className="contact__title">kontakt</h2>
 
       <div className="contact__data">
-        <h3 className="contact__data__name">
+        <h3 className="contact__data__item contact__data__item--name">
           Pracownia Wnętrz Katarzyna Dziedzic
         </h3>
-        <h3 className="contact__data__company">
+        <h3 className="contact__data__item contact__data__item--company">
           Projektowanie wnętrz Warszawa
         </h3>
-        <h3 className="contact__data__mail">
+        <h3 className="contact__data__item contact__data__item--mail">
           Email: kontakt@pracownia-wnetrz.pl
         </h3>
-        <h3 className="contact__data__phone">Tel: +48 795 736 756</h3>
-        <h2 className="contact__data__NIP">NIP 951 248 99 19</h2>
+        <h3 className="contact__data__item contact__data__item--phone">
+          Tel: +48 795 736 756
+        </h3>
+        <h2 className="contact__data__item contact__data__item--NIP">
+          NIP 951 248 99 19
+        </h2>
       </div>
 
-      <div className="contact__menuBox">
-        <Logo />
-        <Menu />
-      </div>
-      <div className="contact__socialBox">
-        <Social />
-      </div>
+      <Social />
+
       <div className="contact__copywriterBox">© Pracownia Wnętrz 2020</div>
     </div>
   );
