@@ -11,8 +11,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    left: 10vw;
     height: 80vh;
-    width: 40vw;
+    width: 30vw;
     margin-top: 15vh;
     z-index: -1;
     overflow: hidden;
@@ -24,25 +25,20 @@
   &__description {
     position: absolute;
     top: 25vh;
-    left: 55vw;
+    right: 10vw;
     width: 30vw;
     height: 70vh;
     animation: slideFromBot 1.5s;
-    &__item {
-      font-weight: 300;
-      text-align: justify;
-      font-size: 1.2rem;
-      line-height: 2.5rem;
-      letter-spacing: 0.02em;
-      &--top {
-        margin-bottom: 2rem;
-      }
-    }
+    font-weight: 300;
+    text-align: justify;
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.02em;
   }
   &__title {
     position: absolute;
     top: 75vh;
-    left: 40vw;
+    left: 41vw;
     writing-mode: vertical-rl;
     text-orientation: mixed;
 
@@ -62,35 +58,26 @@
       display: none;
     }
     &__title {
-      top: 25vh;
+      top: 15vh;
       left: 20vw;
-      font-size: 3.5rem;
+      font-size: 3rem;
       line-height: 4rem;
+      writing-mode: unset;
     }
     &__description {
-      top: 30vh;
+      top: 25vh;
       left: 20vw;
-
-      &__item {
-        font-size: 1.1rem;
-        &--top {
-          width: 50vw;
-          margin-left: 15vw;
-        }
-        &--bot {
-          width: 65vw;
-        }
-      }
+      font-size: 1.1rem;
+      width: 60vw;
+      right: 20vw;
     }
   }
 }
-@media screen and (min-width: 416px) and (max-width: 769px) and (orientation: portrait) {
+@media screen and (min-width: 416px) and (max-width: 767px) and (orientation: portrait) {
   .studio {
     &__description {
-      &__item {
-        font-size: 1rem;
-        line-height: 2rem;
-      }
+      line-height: 1.6rem;
+      font-size: 1.2rem;
     }
   }
 }
@@ -100,35 +87,25 @@
       display: none;
     }
     &__title {
-      top: 15vh;
+      top: 20vh;
       left: 15vw;
       font-size: 3rem;
       line-height: 4rem;
+      writing-mode: unset;
     }
     &__description {
-      top: 10rem;
+      top: 35vh;
       left: 15vw;
-
-      &__item {
-        font-size: 1.1rem;
-        line-height: 2rem;
-        &--top {
-          width: 55vw;
-          margin-left: 12vw;
-        }
-        &--bot {
-          width: 70vw;
-        }
-      }
+      font-size: 1.1rem;
+      line-height: 2rem;
+      width: 70vw;
     }
   }
 }
 @media screen and (min-width: 738px) and (max-width: 1023px) and (orientation: landscape) {
   .studio {
     &__description {
-      &__item {
-        line-height: 1.8rem;
-      }
+      line-height: 2rem;
     }
   }
 }

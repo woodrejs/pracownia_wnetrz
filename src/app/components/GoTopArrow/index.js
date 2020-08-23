@@ -11,6 +11,13 @@ const GoTopArrow = () => {
     if (scrollOfsset > window.innerHeight - 20)
       return { position: "fixed", display: "block" };
   };
-  return <div className="arrow" style={handleMenuPosition()}></div>;
+  const handleClick = () => window.scrollTo(0, 0);
+  return (
+    <div
+      className="arrow"
+      onClick={handleClick}
+      style={handleMenuPosition()}
+    ></div>
+  );
 };
 export default GoTopArrow;

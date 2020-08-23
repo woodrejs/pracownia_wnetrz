@@ -7,15 +7,15 @@
   &__imageBox {
     height: 100vh;
     width: 35vw;
-    margin-left: 53vw;
+    right: 10vw;
     position: absolute;
     z-index: -1;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     overflow: hidden;
     &__image {
-      width: 100%;
+      height: 100%;
       animation: slideFromBot 1.5s;
     }
   }
@@ -25,9 +25,9 @@
     display: flex;
     justify-content: space-between;
     list-style: none;
-    width: 32vw;
-    left: 8vw;
-    top: 17vh;
+    width: 30vw;
+    left: 10vw;
+    top: 20vh;
     border-bottom: 1px solid #2f2f2f;
     &__item {
       text-transform: uppercase;
@@ -38,10 +38,10 @@
   &__content {
     animation: slideFromBot 1.5s;
     position: absolute;
-    width: 32vw;
+    width: 30vw;
     height: 43vh;
-    top: 34vh;
-    left: 8vw;
+    top: 35vh;
+    left: 10vw;
   }
 }
 @media screen and (max-width: 415px) {
@@ -60,6 +60,13 @@
     &__content {
       left: 20vw;
       width: 60vw;
+    }
+  }
+}
+@media screen and (min-width: 416px) and (max-width: 769px) and (orientation: portrait) {
+  .offers {
+    &__imageBox {
+      justify-content: center;
     }
   }
 }

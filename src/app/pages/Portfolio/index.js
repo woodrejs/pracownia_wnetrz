@@ -27,8 +27,6 @@ const Portfolio = () => {
         <li className="portfolio__handlerBox__item">prev</li>
         <li className="portfolio__handlerBox__item">next</li>
       </ul>
-
-      <p className="portfolio__copywriterBox">© Pracownia Wnętrz 2020</p>
     </div>
   );
 };

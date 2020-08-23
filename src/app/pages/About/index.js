@@ -31,8 +31,6 @@ const About = () => {
       </div>
 
       <Social />
-
-      <p className="about__copywriterBox">© Pracownia Wnętrz 2020</p>
     </div>
   );
 };

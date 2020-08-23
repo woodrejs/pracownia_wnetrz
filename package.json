@@ -34,10 +34,13 @@
     ]
   },
   "devDependencies": {
+    "firebase": "^7.19.0",
+    "firebase-tools": "^8.9.0",
     "react-lazy-load-image-component": "^1.5.0",
     "react-lazyload": "^3.0.0",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
-    "react-router-hash-link": "^2.0.0"
+    "react-router-hash-link": "^2.0.0",
+    "uuid": "^8.3.0"
   }
 }

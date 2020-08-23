@@ -29,8 +29,6 @@ const Contact = () => {
       </div>
 
       <Social />
-
-      <div className="contact__copywriterBox">© Pracownia Wnętrz 2020</div>
     </div>
   );
 };

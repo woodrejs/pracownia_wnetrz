@@ -1,0 +1,16 @@
+.galleryPanel {
+  width: 100%;
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__addPhoto {
+    padding: 0.2rem;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+  }
+}

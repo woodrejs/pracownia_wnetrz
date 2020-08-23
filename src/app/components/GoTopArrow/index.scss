@@ -3,12 +3,12 @@
 .arrow {
   cursor: pointer;
   display: none;
-  width: 1.8rem;
-  height: 1.8rem;
+  width: 1.5rem;
+  height: 1.5rem;
   box-sizing: border-box;
   position: absolute;
-  bottom: 5vh;
-  right: 2vw;
+  bottom: 5%;
+  right: 4%;
   transform: rotate(-45deg);
 
   &::before {
@@ -45,5 +45,17 @@
   &:hover::before {
     border-color: $primary;
     transform: scale(0.8);
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .arrow {
+    right: 6%;
+  }
+}
+@media screen and (max-width: 801px) and (orientation: landscape) {
+  .arrow {
+    right: 4%;
+    bottom: 4%;
   }
 }
