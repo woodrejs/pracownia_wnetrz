@@ -2,11 +2,11 @@ import React from "react";
 import "./index.scss";
 import { HashLink as Link } from "react-router-hash-link";
 
-const SubMenuItem = ({ name, to }) => {
+const SubMenuItem = ({ name, to, click }) => {
   return (
-    <li className="subMenuItem">
+    <li className="subMenuItem" onClick={() => click(name)}>
       <Link smooth to={to} className="subMenuItem__link">
-        {name}
+        Projekt {name}
       </Link>
       <div className="subMenuItem__line" />
     </li>

@@ -17,10 +17,11 @@
     align-items: flex-start;
     &__slider {
       width: 100%;
-
+      transition: 0.5s ease-in-out;
       position: absolute;
       display: flex;
       flex-wrap: wrap;
+      justify-content: space-between;
     }
   }
   &__handlerBox {
@@ -47,6 +48,8 @@
     &__galleryBox {
       &__slider {
         flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
       }
     }
     &__handlerBox {
@@ -61,6 +64,8 @@
       justify-content: center;
       &__slider {
         flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
       }
     }
     &__handlerBox {

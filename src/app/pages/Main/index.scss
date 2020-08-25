@@ -22,14 +22,18 @@
     width: 60%;
     height: 100vh;
     margin-left: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
-    background-position: center;
-    background-size: cover;
+    &__img {
+      height: 100%;
+    }
   }
   &__titleBox {
     position: absolute;
     margin-left: 20%;
-    margin-top: 30vh;
+    margin-top: 35vh;
   }
 }
 @media screen and (max-width: 415px) and (orientation: portrait) {

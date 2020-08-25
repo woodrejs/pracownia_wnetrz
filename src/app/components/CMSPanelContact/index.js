@@ -7,22 +7,34 @@ const CMSPanelContact = ({ data }) => {
     <div className="CMS__box">
       <span className="CMS__title">Contact</span>
       <TitleInput
-        name="Contact name"
+        name="name"
         docName="contact"
         keyName="name"
         content={data.name}
       />
       <TitleInput
-        name="Contact company"
+        name="company"
         docName="contact"
         keyName="company"
         content={data.company}
       />
       <TextInput
-        name="Contact address"
+        name="mail"
         docName="contact"
-        keyName="address"
-        content={data.address}
+        keyName="mail"
+        content={data.mail}
+      />
+      <TextInput
+        name="phone"
+        docName="contact"
+        keyName="phone"
+        content={data.phone}
+      />
+      <TextInput
+        name="nip"
+        docName="contact"
+        keyName="nip"
+        content={data.nip}
       />
     </div>
   );

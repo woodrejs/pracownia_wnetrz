@@ -1,10 +1,10 @@
 @import "../../scss//VARIABLES.scss";
 
 .titleSection {
-  width: 40vw;
+  width: 50vw;
   &__title {
     font-weight: 300;
-    font-size: 3rem;
+    font-size: 3.2rem;
     line-height: 5rem;
     letter-spacing: 0.05em;
     margin-bottom: 0.8rem;
@@ -12,7 +12,7 @@
   }
   &__subTittle {
     font-weight: 300;
-    font-size: 1rem;
+    font-size: 1.3rem;
     line-height: 2rem;
     letter-spacing: 0.05em;
     color: $third;
@@ -40,7 +40,7 @@
 }
 @media screen and (min-width: 416px) and (max-width: 769px) and (orientation: portrait) {
   .titleSection {
-    width: 60vw;
+    width: 80vw;
   }
 }
 @media screen and (max-width: 801px) and (orientation: landscape) {

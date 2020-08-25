@@ -27,6 +27,10 @@ a {
   color: $primary;
   transition: all 0.3s;
   position: relative;
+  background-color: rgba(255, 255, 255, 1);
+  &:hover {
+    background-color: rgba(255, 255, 255, 0);
+  }
 }
 .btn-one span {
   transition: all 0.3s;
@@ -47,6 +51,7 @@ a {
   border-bottom-style: solid;
   border-top-color: rgba(255, 255, 255, 0.5);
   border-bottom-color: rgba(255, 255, 255, 0.5);
+
   transform: scale(0.1, 1);
 }
 .btn-one:hover span {
@@ -65,7 +70,7 @@ a {
   height: 100%;
   z-index: 1;
   transition: all 0.3s;
-  background-color: rgba(255, 255, 255, 0.3);
+  //background-color: rgba(255, 255, 255, 0.3);
 }
 .btn-one:hover::after {
   opacity: 0;

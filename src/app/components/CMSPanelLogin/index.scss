@@ -1,0 +1,30 @@
+.CMSPanelLogin {
+  height: 95vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__box {
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+  }
+  &__input {
+    height: 2rem;
+    width: 10vw;
+    margin-top: 0.5rem;
+    padding: 0.3rem;
+  }
+  &__btn {
+    width: 10vw;
+    height: 2rem;
+  }
+}

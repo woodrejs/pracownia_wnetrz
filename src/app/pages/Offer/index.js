@@ -1,20 +1,50 @@
 import React from "react";
 import "./index.scss";
-
 import Social from "../../components/Social";
+import { HashLink as Link } from "react-router-hash-link";
 
-const Offer = () => {
+//images
+const imgs = {
+  mini: {
+    sm: require("../../../assets/images/mini_308x768.jpg"),
+    md: require("../../../assets/images/mini_576x1080.jpg"),
+    lg: require("../../../assets/images/mini_576x1080.jpg"),
+  },
+  midi: {
+    sm: require("../../../assets/images/midi_308x768.jpg"),
+    md: require("../../../assets/images/midi_308x768.jpg"),
+    lg: require("../../../assets/images/midi_576x1080.jpg"),
+  },
+  maxi: {
+    sm: require("../../../assets/images/maxi_308x768.jpg"),
+    md: require("../../../assets/images/maxi_308x768.jpg"),
+    lg: require("../../../assets/images/maxi_576x1080.jpg"),
+  },
+};
+
+const Offer = ({ data, type, size }) => {
+  const name = type;
+  const price = data.price;
+  const long = data.long;
+  const dscpt = data.dscpt;
+
   return (
     <>
-      <div className="offer">
-        <div className="offer__imageBox"></div>
+      <div id={type} className="offer">
+        <div className="offer__imageBox">
+          <img
+            className="offer__imageBox__img"
+            src={imgs[type][size]}
+            alt="offer_img"
+          />
+        </div>
 
         <div className="offer__contentBox">
           <h2 className="offer__contentBox__item offer__contentBox__item--title">
-            PROJEKT MAXI
+            {name}
           </h2>
           <h3 className="offer__contentBox__item offer__contentBox__item--price">
-            50 -70 zł /m2
+            {price} zł /m2
           </h3>
           <p className="offer__contentBox__item offer__contentBox__item--info">
             Koszt projektu zależny jest od metrażu projektowanych pomieszczeń
@@ -23,16 +53,13 @@ const Offer = () => {
             Zakres projektu:
           </h4>
           <p className="offer__contentBox__item offer__contentBox__item--description">
-            +rzuty funkcjonalne 2 D w 2-3 wariantach do wyboru <br /> +moodbard
-            (zestawienie w formie planszy 2D) produktów i materiałów
-            wykończeniowych <br />
-            +wizualizacje 3D stworzone na podstawie zestawienia z moodboardu (w
-            tym jedna darmowa zmiana aranżacji)
-            <br /> +konsultacje architektoniczne dotyczące projektu
+            {dscpt}
           </p>
         </div>
 
-        <div className="offer__backBox">wróć</div>
+        <Link className="offer__backBox" to="/#offers">
+          wróć
+        </Link>
       </div>
 
       <div className="offer__moreContent">
@@ -40,37 +67,11 @@ const Offer = () => {
           Nadzór autorski:
         </h3>
         <p className="offer__moreContent__item offer__moreContent__item--description">
-          +Szczegółowy kosztorys prac wykończeniowych w pliku Excel
-          <br /> +Koszty materiałów budowlanych rejestrowane na bieżąco w pliku
-          Excel udostępnionym w chmurze
-          <br /> +Logistyka zamówień produktów i materiałów wykończeniowych, a
-          także materiałów budowlanych.
-          <br /> +Częstotliwość wizyt na inwestycji to 3-4 razy w tygodniu
-          kalendarzowym (jeśli jest potrzeba ekipa pracuje również w weekendy)
-          <br /> +Wszystkie zamówienia i materiały budowlane organizujemy
-          samodzielnie – dla Państwa to oszczędność czasu, oraz gotówki na
-          ewentualne transporty.
-          <br />
-          +Przedstawienie wykonawcom założeń projektowych
-          <br /> +Opracowanie harmonogramu prac wykończeniowych
-          <br /> +Koordynacja prac związanych z procesem realizacji projektu
-          <br /> +Weryfikacja dostaw materiałów pod kątem ich zgodności z
-          zamówieniem, warunkami technicznymi oraz terminem dostawy <br />
-          +Stała kontrola postępu prac wykonawczych, terminowości, ich jakości
-          wykonania i zgodności z projektem <br />
-          +Rozwiązywanie bieżących problemów projektowych związanych z
-          prowadzonymi pracami <br />
-          +Wprowadzanie ewentualnych zmian projektowych <br />
-          +Stały kontakt z firmami realizującymi prace wykończeniowe w trakcie
-          realizacji wnętrza
-          <br /> +Informowanie o postępie prac oraz podjętych decyzjach
-          <br /> +związanych z realizacją projektu
+          {long}
         </p>
       </div>
 
       <Social />
-
-      <div className="offer__copywriterBox">© Pracownia Wnętrz 2020</div>
     </>
   );
 };

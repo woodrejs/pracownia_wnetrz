@@ -3,28 +3,43 @@ import "./index.scss";
 
 import Social from "../../components/Social";
 
-const Contact = () => {
+//images
+const imgs = {
+  bck: {
+    sm: require("../../../assets/images/contact_bck.jpg"),
+    md: require("../../../assets/images/contact_bck.jpg"),
+    lg: require("../../../assets/images/contact_bck.jpg"),
+  },
+};
+
+const Contact = ({ data, size }) => {
+  const { name, company, mail, phone, nip } = data;
   return (
     <div className="contact">
-      <div className="contact__mask"></div>
-      <div className="contact__image"></div>
+      <div className="contact__image">
+        <img
+          className="contact__image__img"
+          src={imgs.bck[size]}
+          alt="bck_img"
+        />
+      </div>
       <h2 className="contact__title">kontakt</h2>
 
       <div className="contact__data">
         <h3 className="contact__data__item contact__data__item--name">
-          Pracownia Wnętrz Katarzyna Dziedzic
+          {name}
         </h3>
         <h3 className="contact__data__item contact__data__item--company">
-          Projektowanie wnętrz Warszawa
+          {company}
         </h3>
         <h3 className="contact__data__item contact__data__item--mail">
-          Email: kontakt@pracownia-wnetrz.pl
+          Email: {mail}
         </h3>
         <h3 className="contact__data__item contact__data__item--phone">
-          Tel: +48 795 736 756
+          Tel: {phone}
         </h3>
         <h2 className="contact__data__item contact__data__item--NIP">
-          NIP 951 248 99 19
+          NIP {nip}
         </h2>
       </div>
 

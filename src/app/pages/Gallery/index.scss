@@ -1,34 +1,55 @@
-.gallery {
-  width: 100vw;
-  position: relative;
+@import "../../scss/KEYFRAMES.scss";
 
+.gallery {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  animation: fadeIn 1s;
   &__imagesBox {
     position: relative;
-    border: 1px solid black;
-    min-height: 80vh;
-    width: 70vw;
-    margin: 10vh 15vw 0 15vw;
+    min-height: 85vh;
+    width: 70%;
+    margin: 10vh 15% 0 15%;
+
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &__img {
+      height: 35vh;
+      margin: 1rem;
+    }
   }
+
   &__titleBox {
     position: fixed;
-    bottom: 10vh;
+    bottom: 45vh;
+    left: 4%;
     writing-mode: vertical-rl;
     text-orientation: mixed;
 
     font-style: normal;
     font-weight: 300;
-    font-size: 1.5rem;
-    line-height: 10rem;
+    font-size: 2rem;
+
     letter-spacing: 0.02em;
   }
+  &__btn {
+    position: fixed;
+    bottom: 10vh;
+    left: 4%;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 1.5rem;
+  }
+}
 
-  &__copywriterBox {
-    text-align: center;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    font-size: 0.8rem;
-    line-height: 2rem;
+@media screen and (max-width: 769px) {
+  .gallery {
+    &__imagesBox {
+      &__img {
+        width: 100%;
+        height: unset;
+      }
+    }
   }
 }

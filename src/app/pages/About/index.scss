@@ -6,6 +6,7 @@
   position: relative;
   animation: fadeIn 1s;
   &__description {
+    animation: slideFromBot 0.5s;
     position: absolute;
     left: 43%;
     top: 35vh;
@@ -22,30 +23,39 @@
     }
   }
   &__bck {
+    animation: slideFromBot 0.5s;
     position: absolute;
     top: 32vh;
     left: 10%;
-    background-image: url("../../../assets//images/about_bck.jpg");
     z-index: -1;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     height: 50vh;
     width: 20%;
     z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    &__img {
+      width: 100%;
+    }
   }
   &__image {
+    animation: slideFromBot 0.5s;
     position: absolute;
     top: 28vh;
     left: 12%;
-    background-image: url("../../../assets//images/about_img.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     height: 50vh;
     width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    &__img {
+      height: 100%;
+    }
   }
   &__title {
+    animation: slideFromTop 0.5s;
     writing-mode: vertical-rl;
     text-orientation: mixed;
     position: absolute;

@@ -11,19 +11,23 @@ const CMSPanelImage = ({ name }) => {
     const smFile = refArray.sm.current.files[0];
     const mdFile = refArray.md.current.files[0];
     const lgFile = refArray.lg.current.files[0];
+    const key = uuid();
+    const data = {};
 
     if (smFile && mdFile && lgFile) {
-      const key = uuid();
       for (const item in refArray) {
         const file = refArray[item].current.files[0];
         const fileName = `${key}_${item}`;
         //add to storage
         const cloudPath = `gallery/${name}/photos/${key}/${fileName}`;
         const url = await uploadImg(cloudPath, file);
-        //add to firestore
-        const dbPath = `${name}.photos.${key}.${item}`;
-        updateDb("gallery", dbPath, url);
+        data[item] = url;
       }
+
+      //add to firestore
+      const dbPath = `${name}.photos.${key}`;
+      updateDb("gallery", dbPath, data);
+
       alert("pliki dodane");
     } else alert("wszystkie rozmiary zdjecia muszą być dodane");
   };
@@ -49,3 +53,21 @@ const CMSPanelImage = ({ name }) => {
   );
 };
 export default CMSPanelImage;
+/*
+   if (smFile && mdFile && lgFile) {
+      const key = uuid();
+      const data = {};
+      for (const item in refArray) {
+        const file = refArray[item].current.files[0];
+        const fileName = `${key}_${item}`;
+        //add to storage
+        const cloudPath = `gallery/${name}/photos/${key}/${fileName}`;
+        const url = await uploadImg(cloudPath, file);
+        //add to firestore
+        const dbPath = `${name}.photos.${key}.${item}`;
+        updateDb("gallery", dbPath, url);
+      }
+      alert("pliki dodane");
+    } else alert("wszystkie rozmiary zdjecia muszą być dodane");
+  };
+  */

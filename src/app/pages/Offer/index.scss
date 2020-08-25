@@ -5,6 +5,7 @@
   width: 100%;
   position: relative;
   &__contentBox {
+    animation: slideFromBot 1s;
     position: absolute;
     left: 8%;
     top: 20vh;
@@ -41,17 +42,22 @@
     }
   }
   &__imageBox {
+    animation: slideFromBot 1s;
     height: 100vh;
     width: 30%;
     margin-left: 60%;
     position: absolute;
-    background-image: url("../../../assets//images/mini_img.jpg");
     z-index: -1;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    &__img {
+      height: 100%;
+    }
   }
   &__backBox {
+    animation: slideFromTop 1s;
     cursor: pointer;
     writing-mode: vertical-rl;
     text-orientation: mixed;
@@ -134,6 +140,9 @@
 }
 @media screen and (min-width: 416px) and (max-width: 769px) and (orientation: portrait) {
   .offer {
+    &__imageBox {
+      width: 40%;
+    }
     &__contentBox {
       width: 40%;
       &__item {
@@ -179,6 +188,13 @@
     }
     &__moreContent {
       margin: 5% 15%;
+    }
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1025px) and (orientation: landscape) {
+  .offer {
+    &__imageBox {
+      width: 40%;
     }
   }
 }

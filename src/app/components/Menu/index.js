@@ -3,7 +3,7 @@ import MenuItem from "../MenuItem";
 import SubMenuItem from "../SubMenuItem";
 import "./index.scss";
 
-const Menu = () => {
+const Menu = ({ click }) => {
   return (
     <>
       <ul className="menu">
@@ -11,9 +11,9 @@ const Menu = () => {
         <MenuItem name="portfolio" to="/#portfolio"></MenuItem>
 
         <MenuItem name="oferta" to="/#offers">
-          <SubMenuItem name="projekt mini" to="/offer" />
-          <SubMenuItem name="projekt midi" to="/offer" />
-          <SubMenuItem name="projekt maxi" to="/offer" />
+          <SubMenuItem name="mini" to="/mini#mini" click={click} />
+          <SubMenuItem name="midi" to="/midi#midi" click={click} />
+          <SubMenuItem name="maxi" to="/maxi#maxi" click={click} />
         </MenuItem>
 
         <MenuItem name="o mnie" to="/about"></MenuItem>

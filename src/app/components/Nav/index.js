@@ -4,7 +4,7 @@ import Logo from "../Logo";
 import Burger from "../Burger";
 import "./index.scss";
 
-const Nav = () => {
+const Nav = ({ click }) => {
   const [scrollOfsset, setScrollOffset] = useState(0);
   window.addEventListener("scroll", () => {
     setScrollOffset(window.pageYOffset);
@@ -19,7 +19,7 @@ const Nav = () => {
         <Logo />
       </div>
       <div className="nav__menuBox">
-        <Menu />
+        <Menu click={click} />
       </div>
       <div className="nav__burgerBox">
         <Burger />

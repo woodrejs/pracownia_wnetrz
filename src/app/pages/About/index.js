@@ -1,32 +1,42 @@
 import React from "react";
 import "./index.scss";
-
 import Social from "../../components/Social";
 
-const About = () => {
+//images
+const imgs = {
+  main: {
+    sm: require("../../../assets/images/about_img.jpg"),
+    md: require("../../../assets/images/about_img.jpg"),
+    lg: require("../../../assets/images/about_img.jpg"),
+  },
+  bck: {
+    sm: require("../../../assets/images/about_bck_205x384.jpg"),
+    md: require("../../../assets/images/about_bck_384x540.jpg"),
+    lg: require("../../../assets/images/about_bck_384x540.jpg"),
+  },
+};
+
+const About = ({ data, size }) => {
   return (
     <div className="about">
-      <div className="about__image"></div>
-      <div className="about__bck"></div>
+      <div className="about__image">
+        <img
+          className="about__bck__img"
+          src={imgs.main[size]}
+          alt="about__image__img"
+        />
+      </div>
+      <div className="about__bck">
+        <img
+          className="about__bck__img"
+          src={imgs.bck[size]}
+          alt="about_bck_img"
+        />
+      </div>
       <h2 className="about__title">o mnie</h2>
       <div className="about__description">
         <p className="about__description__p about__description__p--top">
-          Jestem dyplomowanym projektantem wnętrz z wieloletnim doświadczeniem w
-          branży wnętrzarskiej. Wiedzę zdobywałam na studiach inżynierskich na
-          kierunku architektury wnętrz, ukończyłam również dwuletnie studium
-          dokształcające w zakresie kreatywnego aranżowania przestrzeni.
-          Dodatkowo kształciłam się na studiach inżynierskich na wydziale
-          meblarstwa i przez kilka lat zajmowałam się projektowaniem i renowacją
-          mebli.
-        </p>
-        <p className="about__description__p about__description__p--bot">
-          Prowadzę Pracownię Wnętrz zajmującą się projektowaniem wnętrz
-          mieszkalnych i publicznych na teranie całego kraju. Na swoim koncie
-          mam już wiele kompleksowo zrealizowanych projektów. Pierwszym i
-          zarazem najważniejszym etapem projektu jest zrozumienie potrzeb,
-          prowadzę spotkana na terenie Warszawy i okolic, gdzie w miłej
-          atmosferze rozmawiamy o Twoich gustach i stylu życia, bym mogła
-          zaproponować aranżacje idealną właśnie dla Ciebie.
+          {data.dscpt}
         </p>
       </div>
 

@@ -3,11 +3,13 @@ import "./index.scss";
 
 const Social = () => {
   return (
-    <img
-      className="facebook"
-      src={require("../../../assets/icons/facebook.svg")}
-      alt="facebook_icon"
-    />
+    <a href="https://pl-pl.facebook.com/">
+      <img
+        className="facebook"
+        src={require("../../../assets/icons/facebook.svg")}
+        alt="facebook_icon"
+      />
+    </a>
   );
 };
 export default Social;

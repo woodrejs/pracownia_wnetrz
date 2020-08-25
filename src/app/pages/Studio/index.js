@@ -2,36 +2,31 @@ import React from "react";
 import "./index.scss";
 import LazyLoad from "react-lazyload";
 
+//images
 const imgs = {
-  small: require("../../../assets/images/studio_410x615.jpg"),
-  medium: require("../../../assets/images/studio_410x615.jpg"),
-  large: require("../../../assets/images/studio_768x864.jpg"),
+  sm: require("../../../assets/images/studio_410x615.jpg"),
+  md: require("../../../assets/images/studio_410x615.jpg"),
+  lg: require("../../../assets/images/studio_768x864.jpg"),
 };
 
-const Studio = () => {
+const Studio = ({ data, size }) => {
   return (
     <div className="studio">
-      <LazyLoad offset={-window.innerHeight / 3} once>
+      <LazyLoad
+        offset={-window.innerHeight / 3}
+        height={window.innerHeight / 2}
+        once
+      >
         <div className="studio__imageBox ">
           <img
             className="studio__imageBox__image"
-            src={imgs.large}
+            src={imgs[size]}
             alt="studio_img"
           />
         </div>
       </LazyLoad>
       <LazyLoad offset={-window.innerHeight / 3} once>
-        <div className="studio__description">
-          Łączenie styli, tworzenie wyjątkowych aranżacji, a przede wszystkim
-          podążanie za pragnieniami i potrzebami klienta to moja wizja pracy nad
-          projektem. Nasze studio zajmuje się projektowaniem przestrzeni
-          mieszkalnych i publicznych na terenie całego kraju <br />
-          Nasza oferta obejmuje również realizacje projektów „pod klucz”,
-          zapewniamy profesjonalne wykończenie i doświadczoną ekipę remontową.
-          Współpracujemy także z wieloma sklepami wnętrzarskimi – zapewniając
-          tym samym kompleksową i sprawną realizację projektów.
-        </div>
-
+        <div className="studio__description">{data.dscpt}</div>
         <h2 className="studio__title">studio</h2>
       </LazyLoad>
     </div>
