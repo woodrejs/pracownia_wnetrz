@@ -16,7 +16,9 @@ const CMSImage = ({ path, name, galleryName }) => {
   return (
     <li>
       {name}
-      <button onClick={handleBtn}>delete</button>
+      <button className="CMS__btn" onClick={handleBtn}>
+        delete
+      </button>
     </li>
   );
 };

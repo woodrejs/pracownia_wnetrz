@@ -16,13 +16,13 @@ const Burger = () => {
         oferta
       </Link>
       <Link className="bm-item" to="/mini">
-        oferta
+        Projekt Mini
       </Link>
       <Link className="bm-item" to="/midi">
-        oferta
+        Projekt Midi
       </Link>
       <Link className="bm-item" to="/maxi">
-        oferta
+        Projekt Maxi
       </Link>
       <Link className="bm-item" to="/about">
         About

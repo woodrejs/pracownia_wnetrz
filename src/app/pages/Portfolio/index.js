@@ -23,11 +23,14 @@ const Portfolio = ({ data, utils, size }) => {
     }
     return arr;
   };
+  console.log(Math.ceil(portfolioLength / 3));
+  console.log(counter);
 
   const handleNextBtn = () => {
     if ((size !== "lg") & (window.innerWidth < window.innerHeight)) {
       if (counter <= portfolioLength - 2) setCounter(counter + 1);
     } else {
+      //if (counter < portfolioLength % 3) setCounter(counter + 1);
       if (counter < Math.floor(portfolioLength / 3)) setCounter(counter + 1);
     }
   };

@@ -2,15 +2,21 @@
 
 .offer {
   min-height: 100vh;
+}
+.offer__Top {
   width: 100%;
-  position: relative;
+  min-height: 100vh;
+  display: flex;
+
   &__contentBox {
-    animation: slideFromBot 1s;
-    position: absolute;
-    left: 8%;
-    top: 20vh;
-    height: 70vh;
-    width: 35%;
+    flex: 7;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 6vw 6vw 0 6vw;
+    animation: slideFromTop 1.5s;
+    margin-top: 5vh;
+    //background-color: lightcoral;
     &__item {
       font-style: normal;
       font-weight: normal;
@@ -19,6 +25,7 @@
       &--title {
         font-size: 2.5rem;
         line-height: 5rem;
+        text-transform: uppercase;
       }
       &--price {
         font-size: 1.9rem;
@@ -41,160 +48,70 @@
       }
     }
   }
-  &__imageBox {
-    animation: slideFromBot 1s;
-    height: 100vh;
-    width: 30%;
-    margin-left: 60%;
-    position: absolute;
-    z-index: -1;
+  &__backBox {
+    animation: fadeIn 3s;
+    flex: 1;
+    height: 90vh;
     display: flex;
     justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    &__img {
-      height: 100%;
-    }
-  }
-  &__backBox {
-    animation: slideFromTop 1s;
-    cursor: pointer;
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    position: absolute;
-    bottom: 5vh;
-    left: 56%;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 1.8rem;
-    line-height: 4rem;
-    letter-spacing: 0.05em;
-  }
-  &__copywriterBox {
-    text-align: center;
-    width: 100%;
-    font-size: 0.8rem;
-    line-height: 2rem;
-  }
+    align-items: flex-end;
+    &__btn {
+      cursor: pointer;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
 
-  &__moreContent {
-    margin: 8%;
-
-    &__item {
       font-style: normal;
       font-weight: 300;
+      font-size: 1.8rem;
+      line-height: 4rem;
       letter-spacing: 0.05em;
-      &--title {
-        font-size: 1.2rem;
-        margin-bottom: 2rem;
-        font-weight: normal;
+      transition: 0.2s;
+      &:hover {
+        scale: 1.2;
       }
-      &--description {
-        font-size: 1rem;
-        line-height: 2.5rem;
-        padding-bottom: 10vh;
-      }
+    }
+  }
+  &__imageBox {
+    animation: slideFromTop 1s;
+    flex: 5;
+  }
+}
+.offer__Bot {
+  width: 100%;
+  padding: 6vw;
+  &__content {
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: 0.05em;
+    margin-bottom: 2rem;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 769px) and (orientation: portrait) {
+  .offer__Top {
+    &__imageBox {
+      display: none;
+    }
+    &__backBox {
+      height: 60vh;
+      margin-right: 2vw;
     }
   }
 }
 
-@media screen and (max-width: 415px) and (orientation: portrait) {
-  .offer {
-    &__contentBox {
-      left: 15vw;
-      top: 18vh;
-      width: 70vw;
-      height: 85vh;
-      &__item {
-        &--subTitle {
-          font-size: 1.3rem;
-        }
-        &--description {
-          font-size: 1.2rem;
-        }
-      }
-    }
-    &__imageBox {
-      display: none;
-    }
-    &__backBox {
-      position: fixed;
-      font-weight: normal;
-      left: 2vw;
-      bottom: 5vh;
-    }
-    &__moreContent {
-      margin: 15vw;
-      width: 70vw;
-      margin-top: 0;
-      &__item {
-        &--title {
-          font-size: 1.3rem;
-        }
-        &--description {
-          font-size: 1.2rem;
-        }
-      }
-    }
-  }
-}
-@media screen and (min-width: 416px) and (max-width: 769px) and (orientation: portrait) {
-  .offer {
-    &__imageBox {
-      width: 40%;
-    }
-    &__contentBox {
-      width: 40%;
-      &__item {
-        &--description {
-          font-size: 1.2rem;
-          line-height: 2.1rem;
-        }
-      }
-    }
-    &__backBox {
-      font-weight: normal;
-      left: 52vw;
-    }
-    &__moreContent {
-      &__item {
-        &--description {
-          font-size: 1.2rem;
-          line-height: 2.1rem;
-        }
-      }
-    }
-  }
-}
 @media screen and (max-width: 737px) and (orientation: landscape) {
-  .offer {
-    &__contentBox {
-      left: 15%;
-      top: 15vh;
-      width: 75vw;
-      &__item {
-        margin-bottom: 0rem;
-        &--info {
-          margin-bottom: 2rem;
-        }
-      }
-    }
+  .offer__Top {
     &__imageBox {
       display: none;
     }
+    &__contentBox {
+      padding: 4%;
+    }
     &__backBox {
-      position: fixed;
-      left: 6%;
-    }
-    &__moreContent {
-      margin: 5% 15%;
-    }
-  }
-}
-@media screen and (min-width: 769px) and (max-width: 1025px) and (orientation: landscape) {
-  .offer {
-    &__imageBox {
-      width: 40%;
+      height: 60vh;
     }
   }
 }

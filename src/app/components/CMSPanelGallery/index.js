@@ -37,7 +37,9 @@ const CMSPanelGallery = ({ name, data }) => {
 
   return (
     <div className="CMS__box">
-      <button onClick={handleClick}>delete gallery</button>
+      <button onClick={handleClick} className="CMS__btn">
+        Usuń galerie
+      </button>
       <span className="CMS__title">{name}</span>
       <span className="CMS__subTitle">Dodaj zdjęcie</span>
       <div className="CMS__subBox">

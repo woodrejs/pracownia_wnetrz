@@ -7,9 +7,7 @@ const TextInput = ({ name, docName, keyName, content }) => {
   const handleBtn = () => {
     const inputVal = inputRef.current.value;
 
-    inputVal.length > 3
-      ? updateDb(docName, keyName, inputVal)
-      : alert("tekst musi mieć conajmniej 3 znaki");
+    updateDb(docName, keyName, inputVal);
   };
 
   return (

@@ -1,3 +1,4 @@
+@import "../../scss/VARIABLES.scss";
 .main {
   height: 100vh;
   width: 100%;
@@ -10,17 +11,14 @@
     left: 0px;
     top: 0px;
     z-index: -1;
-    background: linear-gradient(
-      270deg,
-      #d8d0c7 0%,
-      rgba(223, 204, 183, 0.9) 100%
-    );
+    background: $primary;
   }
   &__image {
     position: absolute;
     z-index: -1;
     width: 60%;
     height: 100vh;
+
     margin-left: 40%;
     display: flex;
     justify-content: center;

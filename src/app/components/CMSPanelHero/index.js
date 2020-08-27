@@ -13,6 +13,8 @@ const CMSPanelHero = () => {
           doc: "hero",
           key: "sm",
         }}
+        MAX_WIDTH={736}
+        MAX_HEIGHT={414}
       />
       <FileInput
         name="MD"
@@ -22,6 +24,8 @@ const CMSPanelHero = () => {
           doc: "hero",
           key: "md",
         }}
+        MAX_WIDTH={1024}
+        MAX_HEIGHT={768}
       />
       <FileInput
         name="LG"
@@ -31,6 +35,8 @@ const CMSPanelHero = () => {
           doc: "hero",
           key: "lg",
         }}
+        MAX_WIDTH={1920}
+        MAX_HEIGHT={1080}
       />
     </div>
   );

@@ -35,7 +35,7 @@ const TitleInput = ({
       {name}
       <input ref={inputRef} type="text" placeholder={content} />
       <button className="CMS__btn" onClick={handleBtn}>
-        zamień
+        {isGallery ? "Dodaj" : "Zamień"}
       </button>
     </label>
   );

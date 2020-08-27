@@ -3,7 +3,7 @@
 .contact {
   width: 100vw;
   height: 96vh;
-  position: relative;
+  position: fixed;
   animation: fadeIn 1s;
 
   &__image {

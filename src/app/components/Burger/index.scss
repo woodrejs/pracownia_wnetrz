@@ -45,6 +45,7 @@
   background: $primary;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
+  width: 100%;
 }
 
 /* Morph shape necessary with bubble or elastic */
@@ -63,7 +64,7 @@
   display: inline-block;
   font-size: 1.3rem;
   text-transform: capitalize;
-  margin-bottom: 3vh;
+  margin-bottom: 5vh;
 }
 
 /* Styling of overlay */

@@ -9,12 +9,11 @@ import Offer from "./app/pages/Offer";
 import Nav from "./app/components/Nav";
 import Copywriter from "./app/components/Copywriter";
 import firebase from "firebase";
+import Loader from "./app/components/Loader";
 
-//Initialize dotenv
-require("dotenv").config();
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_KEY_FB,
+  apiKey: "AIzaSyCKg8ZmTFH9UF7hwXDKSHvM0i7RdIcE2x0",
   authDomain: "kahastudio-86981.firebaseapp.com",
   databaseURL: "https://kahastudio-86981.firebaseio.com",
   projectId: "kahastudio-86981",
@@ -22,6 +21,7 @@ const firebaseConfig = {
   messagingSenderId: "675708655382",
   appId: "1:675708655382:web:6c4f6acd5bc24a57f66237",
 };
+
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
@@ -45,14 +45,16 @@ const App = () => {
     }
   };
   const getData = async () => {
-    const data = {};
+    setTimeout(() => {
+      const data = {};
 
-    db.collection("cms").onSnapshot(function (doc) {
-      doc.forEach((item) => {
-        data[item.id] = item.data();
+      db.collection("cms").onSnapshot(function (doc) {
+        doc.forEach((item) => {
+          data[item.id] = item.data();
+        });
+        setData(data);
       });
-      setData(data);
-    });
+    }, 2000);
   };
   const size = getSize();
 
@@ -94,13 +96,13 @@ const App = () => {
           </Route>
 
           <Route path="/mini">
-            <Offer type={offerType} data={data.mini} size={size} />
+            <Offer type={offerType} data={data.mini} size={size} name="mini" />
           </Route>
           <Route path="/midi">
-            <Offer type={offerType} data={data.midi} size={size} />
+            <Offer type={offerType} data={data.midi} size={size} name="midi" />
           </Route>
           <Route path="/maxi">
-            <Offer type={offerType} data={data.maxi} size={size} />
+            <Offer type={offerType} data={data.maxi} size={size} name="maxi" />
           </Route>
 
           <Route path="/gallery">
@@ -116,7 +118,7 @@ const App = () => {
     );
   } else {
     getData();
-    return <div>loading...</div>;
+    return <Loader />;
   }
 };
 

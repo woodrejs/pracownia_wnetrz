@@ -2,6 +2,7 @@ import React from "react";
 import "./index.scss";
 import Social from "../../components/Social";
 import { HashLink as Link } from "react-router-hash-link";
+import { v4 as uuid } from "uuid";
 
 //images
 const imgs = {
@@ -22,57 +23,60 @@ const imgs = {
   },
 };
 
-const Offer = ({ data, type, size }) => {
-  const name = type;
+const Offer = ({ data, type, size, name }) => {
   const price = data.price;
   const long = data.long;
   const dscpt = data.dscpt;
 
+  const createText = (text) => {
+    return text
+      .split("\n")
+      .map((item, i) => <p key={uuid()}>{item.replace(/\\n/g, "")}</p>);
+  };
+
   return (
-    <>
-      <div id={type} className="offer">
-        <div className="offer__imageBox">
+    <div className="offer">
+      <div id={type} className="offer__Top">
+        <div className="offer__Top__contentBox">
+          <h2 className="offer__Top__contentBox__item offer__Top__contentBox__item--title">
+            {name}
+          </h2>
+          <h3 className="offer__Top__contentBox__item offer__Top__contentBox__item--price">
+            {price} zł /m2
+          </h3>
+          <p className="offer__Top__contentBox__item offer__Top__contentBox__item--info">
+            Koszt projektu zależny jest od metrażu projektowanych pomieszczeń
+          </p>
+          <h4 className="offer__Top__contentBox__item offer__Top__contentBox__item--subTitle">
+            Zakres projektu:
+          </h4>
+          <p className="offer__Top__contentBox__item offer__Top__contentBox__item--description">
+            {createText(dscpt)}
+          </p>
+        </div>
+
+        <div className="offer__Top__backBox">
+          <Link className="offer__Top__backBox__btn" to="/#offers">
+            wróć
+          </Link>
+        </div>
+
+        <div className="offer__Top__imageBox">
           <img
-            className="offer__imageBox__img"
+            className="offer__Top__imageBox__img"
             src={imgs[type][size]}
             alt="offer_img"
           />
         </div>
-
-        <div className="offer__contentBox">
-          <h2 className="offer__contentBox__item offer__contentBox__item--title">
-            {name}
-          </h2>
-          <h3 className="offer__contentBox__item offer__contentBox__item--price">
-            {price} zł /m2
-          </h3>
-          <p className="offer__contentBox__item offer__contentBox__item--info">
-            Koszt projektu zależny jest od metrażu projektowanych pomieszczeń
-          </p>
-          <h4 className="offer__contentBox__item offer__contentBox__item--subTitle">
-            Zakres projektu:
-          </h4>
-          <p className="offer__contentBox__item offer__contentBox__item--description">
-            {dscpt}
-          </p>
+      </div>
+      {long && (
+        <div className="offer__Bot">
+          <p className="offer__Bot__content">{createText(long)}</p>
         </div>
-
-        <Link className="offer__backBox" to="/#offers">
-          wróć
-        </Link>
-      </div>
-
-      <div className="offer__moreContent">
-        <h3 className="offer__moreContent__item offer__moreContent__item--title">
-          Nadzór autorski:
-        </h3>
-        <p className="offer__moreContent__item offer__moreContent__item--description">
-          {long}
-        </p>
-      </div>
+      )}
 
       <Social />
-    </>
+    </div>
   );
 };
 
