@@ -4,7 +4,13 @@ import firebase from "firebase";
 import { v4 as uuid } from "uuid";
 import resizeImg from "../../utils/resizeImg";
 
-const FileInput = ({ name, storagePath, cloudPath, MAX_WIDTH }) => {
+const FileInput = ({
+  name,
+  storagePath,
+  cloudPath,
+  MAX_WIDTH = 10000,
+  resize = true,
+}) => {
   const inputRef = useRef(null);
   const db = firebase.firestore();
 
@@ -26,9 +32,15 @@ const FileInput = ({ name, storagePath, cloudPath, MAX_WIDTH }) => {
 
   const handleBtn = async () => {
     const file = inputRef.current.files[0];
-    file
-      ? uploadFile(await resizeImg(file, MAX_WIDTH))
-      : alert("Należy wybrać plik");
+    if (file) {
+      if (resize) {
+        uploadFile(await resizeImg(file, MAX_WIDTH));
+      } else {
+        uploadFile(file);
+      }
+    } else {
+      alert("Należy wybrać plik");
+    }
   };
 
   return (

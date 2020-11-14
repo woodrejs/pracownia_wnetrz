@@ -74,6 +74,9 @@
   &__imageBox {
     animation: slideFromTop 1s;
     flex: 5;
+    &__img {
+      height: 100vh;
+    }
   }
 }
 .offer__Bot {

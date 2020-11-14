@@ -25,10 +25,10 @@ const Burger = () => {
         Projekt Maxi
       </Link>
       <Link className="bm-item" to="/about">
-        About
+        O mnie
       </Link>
       <Link className="bm-item" to="/contact">
-        Contact
+        Kontakt
       </Link>
     </Menu>
   );

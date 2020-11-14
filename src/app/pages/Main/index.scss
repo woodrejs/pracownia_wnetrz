@@ -30,8 +30,17 @@
   }
   &__titleBox {
     position: absolute;
-    margin-left: 20%;
-    margin-top: 35vh;
+    height: 45vh;
+    margin-left: 10%;
+    margin-top: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    //border: 1px solid red;
+    &__img {
+      width: 25rem;
+    }
   }
 }
 @media screen and (max-width: 415px) and (orientation: portrait) {

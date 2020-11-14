@@ -13,8 +13,8 @@ export default function resizeImg(file, MAX_WIDTH) {
       canvas.height = (canvas.width * img.height) / img.width;
 
       var cur = {
-        width: Math.floor(img.width * 0.5),
-        height: Math.floor(img.height * 0.5),
+        width: Math.floor(img.width * 0.9),
+        height: Math.floor(img.height * 0.9),
       };
 
       oc.width = cur.width;
@@ -61,36 +61,3 @@ export default function resizeImg(file, MAX_WIDTH) {
     };
   });
 }
-/*
-   img.onload = async () => {
-      var canvas = document.createElement("canvas");
-      var ctx = canvas.getContext("2d");
-      ctx.drawImage(img, 0, 0);
-
-      var width = img.width;
-      var height = img.height;
-
-      if (width > height) {
-        if (width > MAX_WIDTH) {
-          height *= MAX_WIDTH / width;
-          width = MAX_WIDTH;
-        }
-      } else {
-        if (height > MAX_HEIGHT) {
-          width *= MAX_HEIGHT / height;
-          height = MAX_HEIGHT;
-        }
-      }
-      canvas.width = width;
-      canvas.height = height;
-      var ctx = canvas.getContext("2d");
-      ctx.drawImage(img, 0, 0, width, height);
-      canvas.toBlob(
-        function (blob) {
-          resolve(blob);
-        },
-        "image/jpeg",
-        0.95
-      );
-    };
-    */

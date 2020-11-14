@@ -3,7 +3,7 @@ import "./index.scss";
 
 const Social = () => {
   return (
-    <a href="https://pl-pl.facebook.com/">
+    <a href="https://www.facebook.com/studiokaha">
       <img
         className="facebook"
         src={require("../../../assets/icons/facebook.svg")}

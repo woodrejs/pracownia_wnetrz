@@ -1,16 +1,6 @@
 import React from "react";
 import "./index.scss";
-
 import Social from "../../components/Social";
-
-//images
-const imgs = {
-  bck: {
-    sm: require("../../../assets/images/contact_bck.jpg"),
-    md: require("../../../assets/images/contact_bck.jpg"),
-    lg: require("../../../assets/images/contact_bck.jpg"),
-  },
-};
 
 const Contact = ({ data, size }) => {
   const { name, company, mail, phone, nip } = data;
@@ -19,7 +9,7 @@ const Contact = ({ data, size }) => {
       <div className="contact__image">
         <img
           className="contact__image__img"
-          src={imgs.bck[size]}
+          src={require("../../../assets/images/contact_bck.jpg")}
           alt="bck_img"
         />
       </div>

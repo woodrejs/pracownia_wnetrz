@@ -2,6 +2,7 @@ import React from "react";
 import TitleSection from "../../components/TitleSection";
 import Social from "../../components/Social";
 import GoTopArrow from "../../components/GoTopArrow";
+import Button from "../../components/Button";
 import "./index.scss";
 
 const Main = ({ data, size }) => {
@@ -19,7 +20,22 @@ const Main = ({ data, size }) => {
       </div>
 
       <div className="main__titleBox">
-        <TitleSection data={data.main} />
+        <img
+          className="main__titleBox__img"
+          src={require("../../../assets/icons/logo_full.png")}
+          alt="main_logo"
+        />
+
+        <Button
+          size={{
+            height: "3rem",
+            width: "15rem",
+            lineHeight: "3rem",
+          }}
+          title="oferta"
+          type={1}
+          path="/#offers"
+        />
       </div>
 
       <Social />

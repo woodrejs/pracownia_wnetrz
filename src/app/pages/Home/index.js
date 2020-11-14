@@ -3,6 +3,7 @@ import Main from "../Main";
 import Studio from "../Studio";
 import Offers from "../Offers";
 import Portfolio from "../Portfolio";
+import Copywriter from "../../components/Copywriter";
 import "./index.scss";
 
 const Home = ({ data, offerUtils, galleryUtils, size }) => {
@@ -26,6 +27,7 @@ const Home = ({ data, offerUtils, galleryUtils, size }) => {
         size={size}
       />
       <Portfolio data={data.gallery} utils={galleryUtils} size={size} />
+      <Copywriter data={data.contact} />
     </div>
   );
 };

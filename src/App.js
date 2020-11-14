@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./app/pages/Home";
 import About from "./app/pages/About";
 import Contact from "./app/pages/Contact";
-import Gallery from "./app/pages/Gallery";
+import CustomGallery from "./app/pages/Gallery";
 import CMS from "./app/pages/CMS";
 import Offer from "./app/pages/Offer";
 import Nav from "./app/components/Nav";
@@ -106,14 +106,12 @@ const App = () => {
           </Route>
 
           <Route path="/gallery">
-            <Gallery data={data.gallery} name={galleryName} size={size} />
+            <CustomGallery data={data.gallery} name={galleryName} size={size} />
           </Route>
           <Route path="/admin">
             <CMS data={data} />
           </Route>
         </Switch>
-
-        <Copywriter />
       </Router>
     );
   } else {

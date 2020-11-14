@@ -1,36 +1,37 @@
 @import "../../scss/KEYFRAMES.scss";
+.css-1cm5myo {
+  max-height: 90vh !important;
+  max-width: 90vw !important;
+}
+.css-6b2qbc {
+  width: 100vw !important;
+}
 
 .gallery {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   position: relative;
   animation: fadeIn 1s;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   &__imagesBox {
+    margin-top: 15vh;
     position: relative;
     min-height: 85vh;
     width: 70%;
-    margin: 10vh 15% 0 15%;
-
-    display: inline-flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    &__img {
-      height: 35vh;
-      margin: 1rem;
-    }
+    padding-bottom: 5vh;
   }
 
   &__titleBox {
     position: fixed;
-    bottom: 45vh;
+    top: 15vh;
     left: 4%;
     writing-mode: vertical-rl;
     text-orientation: mixed;
-
     font-style: normal;
     font-weight: 300;
-    font-size: 2rem;
-
+    font-size: 1.1rem;
     letter-spacing: 0.02em;
   }
   &__btn {
@@ -43,17 +44,6 @@
     transition: 0.2s;
     &:hover {
       scale: 1.2;
-    }
-  }
-}
-
-@media screen and (max-width: 769px) {
-  .gallery {
-    &__imagesBox {
-      &__img {
-        width: 100%;
-        height: unset;
-      }
     }
   }
 }

@@ -10,7 +10,8 @@ const Nav = ({ click }) => {
     setScrollOffset(window.pageYOffset);
   });
   const handleMenuPosition = () => {
-    if (scrollOfsset > window.innerHeight - 20) return { position: "fixed" };
+    if (scrollOfsset > window.innerHeight - 20)
+      return { position: "fixed", backgroundColor: "white" };
   };
 
   return (

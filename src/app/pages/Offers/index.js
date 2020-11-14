@@ -23,7 +23,6 @@ const imgs = {
 };
 
 const Offers = ({ data, utils, size }) => {
-  console.log("render");
   return (
     <div id="offers" className="offers">
       <LazyLoad

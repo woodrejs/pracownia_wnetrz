@@ -18,7 +18,7 @@ const CMSPanelImage = ({ name }) => {
       const sm = await resizeImg(file, 736);
 
       const arr = { sm, md, lg };
-      console.log(arr);
+
       for (const item in arr) {
         const file = arr[item];
         const fileName = `${key}_${item}`;
